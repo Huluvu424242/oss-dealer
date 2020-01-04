@@ -1,0 +1,19 @@
+[
+    {
+        "titel": "Weihnachtsplätzchen",
+        "Zutaten": {
+            "Mehl": "400g",
+            "Butter": "300g",
+            "Schmand (~20%Fett)": "160g",
+            "Zimt": "nach Bedarf",
+            "Zucker": "nach Bedarf"
+        },
+        "Arbeitsschritte": [
+            "Mehl, Butter und Schmand zusammengeben und auf Zimmertemperatur erwärmen lassen.",
+            "Die 3 Zutaten in einer Schüssel gut verkneten.",
+            "Den Teig auf gemehltem Tisch ausrollen.",
+            "Plätzchen ausstechen.",
+            "Die Plätzchen bei 200° ca 10 - 15 Minuten im Herd backen."
+        ]
+    }
+]

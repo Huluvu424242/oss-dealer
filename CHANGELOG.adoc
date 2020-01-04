@@ -1,0 +1,19 @@
+= Changelog
+Alle wichtigen Änderungen am Projekt sind in dieser Datei dokumentiert.
+
+Das Format basiert auf http://keepachangelog.com/de/[Keep a Changelog].
+Die Versionierung erfolgt nach http://semver.org/lang/de/[Semantic Versioning].
+
+// == [3.1.1] fertiggestellt 2018-05-11
+
+== [undelivered]
+=== Added
+
+=== Changed
+
+* n/a
+
+### Removed
+
+* n/a
+

@@ -1,0 +1,83 @@
+== Architekturentscheidungen
+
+=== Technische Aspekte der fachlichen Umsetzung
+
+
+==== Entscheidung Programmiersprache
+
+
+==== Entscheidung Jenkins REST API
+
+
+=== Enscheidung GUI Technologie
+
+=== Entscheidung Entwicklungsmethode
+
+=== Entscheidung Implementierung
+
+=== Entscheidung Testvorgehen
+
+=== Lessons learned
+
+[literatur]
+=== Literatur und Quellen im Netz
+
+
+* https://www.baeldung.com/java-9-modularity
+* https://www.baeldung.com/java-9-logging-api
+* http://www.slf4j.org/codes.html#ignoredBindings
+* http://www.slf4j.org/faq.html#changesInVersion18
+* https://stackoverflow.com/questions/41299060/maven-can-not-resolve-dependencies
+* https://github.com/gatling/gatling/issues/3290
+* https://github.com/qos-ch/logback/blob/master/logback-classic/pom.xml
+* https://cwiki.apache.org/confluence/display/solr/Solrj#Solrj-EmbeddedSolrServer#
+* https://stackoverflow.com/questions/9986546/solr-i-know-solr-is-written-in-java-how-do-i-create-and-control-a-running-inst
+* https://examples.javacodegeeks.com/enterprise-java/apache-solr/apache-solr-tutorial-beginners/
+* https://www.baeldung.com/spring-data-solr
+* https://www.baeldung.com/apache-solrj
+* https://github.com/noffle/art-of-readme[Art of Readme] - Erlerne die Kunst gute READMEs zu schreiben.
+* https://github.com/davidbgk/open-source-template/[open-source-template] - A README template to encourage open-source contributions.
+* https://github.com/spring-cloud-samples/spring-cloud-contract-samples/blob/master/consumer_pact/src/main/resources/application.yml
+
+=== Guter Stil
+* https://tuhrig.de/using-configurationproperties-to-separate-service-and-configuration
+
+=== Auslieferung / Paketierung
+* https://dzone.com/articles/packaging-springboot-application-with-external-dep
+* https://crunchify.com/how-to-create-build-java-project-including-all-dependencies-using-maven-maven-resources-maven-dependency-maven-jar-plugin-tutorial/
+
+
+=== Embedable Document Database
+* http://nosql-database.org/
+* https://blog.doubleslash.de/embedded-databases-weniger-ist-manchmal-mehr/
+* https://www.baeldung.com/java-in-memory-databases
+* https://dzone.com/articles/spring-boot-with-embedded-mongodb (scheint am einfachsten zu gehen)
+* https://www.computerweekly.com/de/tipp/Vergleich-von-NoSQL-Datenbanken-MongoDB-versus-Cassandra
+* https://docs.spring.io/spring-data/mongodb/docs/1.2.0.RELEASE/reference/html/mongo.repositories.html
+* https://dzone.com/articles/setting-up-embedded-cassandra-on-spring-project
+* https://lucene.apache.org/solr/  (scheinbar keine embedded Möglichkeit mehr in latest Version)
+* https://www.baeldung.com/lucene
+* https://www.dizitart.org/nitrite-database.html
+* https://github.com/strapdata/elassandra (eingebettet sehr gut für Unit Test - Mix aus Elasticsearch und Cassandra )
+* http://jsondb.io/
+* https://ejdb.org/
+* https://unqlite.org/
+* https://boilerbay.com/
+* http://armelnene.blogspot.com/2009/11/develop-your-own-google-with-apache.html
+
+
+* Integrate Nitrite into spring boot
+* https://www.baeldung.com/spring-boot-access-h2-database-multiple-apps
+* https://docs.spring.io/spring-data/data-commons/docs/1.6.1.RELEASE/reference/html/repositories.html
+* https://www.baeldung.com/spring-bean
+* https://www.dizitart.org/nitrite-database/
+* https://dzone.com/articles/nitrite-how-to-create-an-embedded-database-for-jav
+* https://dzone.com/articles/nitrite-an-embedded-nosql-database-for-javaandroid
+
+=== Korrekte Spring Repos bauen
+https://docs.spring.io/spring-data/data-commons/docs/1.6.1.RELEASE/reference/html/repositories.html
+https://www.baeldung.com/spring-boot-access-h2-database-multiple-apps
+
+=== Batches in Spring Boot
+* https://www.javainuse.com/spring/springbootbatchtaskscheduler
+* https://aboullaite.me/spring-batch-tutorial-with-spring-boot/

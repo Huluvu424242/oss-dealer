@@ -1,0 +1,174 @@
+[#status]
+image:https://img.shields.io/badge/License-LGPL%20v3-blue.svg[link="https://www.gnu.org/licenses/lgpl-3.0"]
+image:https://maven-badges.herokuapp.com/maven-central/com.github.funthomas424242/rezeptsammlung/badge.svg?style=flat["Maven Central", link="https://maven-badges.herokuapp.com/maven-central/com.github.funthomas424242/rezeptsammlung"]
+// image:https://api.bintray.com/packages/funthomas424242/funthomas424242-libs/rezeptsammlung/images/download.svg[link="https://bintray.com/funthomas424242/funthomas424242-libs/rezeptsammlung/_latestVersion"]
+image:https://travis-ci.org/FunThomas424242/rezeptsammlung.svg?branch=master["Build Status", link="https://travis-ci.org/FunThomas424242/rezeptsammlung"]
+image:https://api.codacy.com/project/badge/Grade/88bf76546176437ea389629a2087d1b5["Codacy code quality", link="https://www.codacy.com/app/FunThomas424242/rezeptsammlung?utm_source=github.com&utm_medium=referral&utm_content=FunThomas424242/rezeptsammlung&utm_campaign=Badge_Grade"]
+image:https://codecov.io/gh/FunThomas424242/rezeptsammlung/branch/master/graph/badge.svg[link="https://codecov.io/gh/FunThomas424242/rezeptsammlung"]
+image:http://images.webestools.com/buttons.php?frm=2&btn_type=11&txt=Scrum Board["Scrum Board,scaledwidth="15%"", link="https://github.com/FunThomas424242/rezeptsammlung/projects/1"]
+
+image:https://img.shields.io/badge/readme%20style-standard-brightgreen.svg?style=flat-square["standard-readme compilant",link="https://github.com/RichardLitt/standard-readme"]
+
+== rezeptsammlung
+image:src/main/resources/img/1984EmmanuelGoldstein.jpg[]
+
+[NOTE]
+====
+[quote, Georg Orwell (Author des Buches "1984")]
+____
+Wer die Vergangenheit kontrolliert, kontrolliert die Zukunft. Wer die Gegenwart kontrolliert, kontrolliert die   
+Vergangenheit.
+____
+====
+
+[#summary]
+Ein Monitor zum Überwachen der Buildstatus ausgewählter Jenkins Jobs.
+Fachlichkeit und Architekturentscheidungen lassen sich dieser Readme sowie den link:ArchitekturEntscheidungen.adoc[ArchitekturEntscheidungen]
+entnehmen.
+
+Da die einzige Aufgabe des Programmes in der Überwachung liegt, hielt ich eine Analogie zu Orwells Roman
+link:https://de.wikipedia.org/wiki/1984_(Roman)#Emmanuel_Goldstein["1984"] für gegeben und habe
+versucht Goldstein im Logo zu verewigen :)
+
+
+== Inhaltsverzeichnis
+
+- link:#hintergrund[Hintergrund]
+- link:#installation[Installation]
+- link:#nutzung[Nutzung]
+- link:#literatur[Literatur und Quellen]
+- link:#projektverantwortlicher[Projektverantwortlicher]
+- link:#unterstützung[Unterstützung]
+- link:#lizenz[Lizenz]
+
+[#hintergrund]
+== Hintergrund
+In der täglichen Arbeit benötigen wir nicht nur ein Auge auf den Build des Features an dem wir aktuell arbeiten.
+In der Regel interessieren wir uns auch für den Build der von der Kollegin gerade live gestellt wird.
+Aber uns interessiert auch der Build vom PullRequest des Kollegen der ein Feature bearbeitet welches möglichst schnell
+in den master soll, damit es dann durch Aktualisierung aus dem master im eigenen Feature Branch genutzt werden kann.
+Die Lösung hieß und heißt Monitoring der Jenkins Builds. Ja dafür gibt es bereits diverse Tools aber egal welches ich
+benutzt habe irgend einen Mangel hatten sie alle:
+
+* Beim Monitoring der master branches diverser Artefakte welche alle eine Multibranch Pipeline im Jenkins nutzen,
+  erscheint bei jedem Job als Bezeichnung nur master :( Damit sind diese für mich nicht unterscheidbar.
+* Einige Monitore zeigen den Status sehr detailliert und super gut aber in einem eigenen Fenster an, welches irgendwo
+  auf dem Desktop öffnet. Das ist zur Info gut aber wenn ich mit der Maus bis dort hin muss um es zu schließen oder
+  zum Job zu springen, dann bringt es mir keinen Performancegewinn.
+
+Dem gegenüber habe ich aber auch gute Features gesehen, allerdings kosteten diese manchmal Geld ;)
+Naja, ich denke in ein paar Iterationen werde ich diese Features mit diesem Projekt auch bieten können und zwar ganz
+nach dem Vorbild von link:https://de.wikipedia.org/wiki/Richard_Stallman[Richard Stallmann] - frei und
+nicht nur kostenlos. Mein Beitrag und meine Hommage an 20 Jahre Open Source.
+
+Features die ich mir vom Projekt wünsche und eben auch umsetzen möchte:
+
+* Definition der zu überwachenden Jobs erfolgt per properties Datei
+* Umsortierung der Anzeige der Jobs per properties Datei muss möglich sein
+* Status rot, grün und grau. Letzterer für Sonderfälle wie Connection lost, oder baut gerade
+* Mit einem Klick muss ein extra Fenster auf dem Bildschirm aufgehen und alle Jobs ausführlich anzeigen
+* Ein weiterer Klick schließt selbiges Fenster - Doppelklick simuliert 2x Einzelklick - passiert also viel aber nichts
+  Nützliches -> Optimierungspotential.
+* Das extra Fenster mit den Status der Jobs wird automatisch im Hintergrund aktualisiert
+* Die Properties werden ebenfalls automatisch im Hintergrund immer wieder ausgelesen. Ein manueller Reload ist nicht
+  erforderlich
+* Das extra Fenster lässt sich per Klick schließen. Je nachdem welcher Job dabei angeklickt wurde, wird der Jenkins
+  Job im Standard Browser geöffnet.
+* All die Eigenschaften werden zusätzlich als Kontextmenü angeboten. Damit sind die Jobs per Maus schnell erreichbar.
+* Auch das Tray Icon zeigt bereits eine minifizierte Darstellung der Jobs. Man sieht also sofort wenn es darin rote
+  Linien gibt.
+* Eine Arbeitsunterbrechung durch einfliegende "Balloon Hinweise 'Dieser oder jener Build ist jetzt grün'" wird es
+  nicht geben.
+* Die Aktualisierungsfrequenz lässt sich im Properties File festlegen, ständig ändern und wird in Sekunden angegeben
+* Authentifizierung soll unterstützt werden (nicht gleich in den ersten Iterationen sondern später)
+* Wenn schon Authentifizierung dann auch für verschiedene Server - Wie ? Das werden wir dann sehen :)
+
+
+[#installation]
+== Installation
+Im Idealfall gibt es eine Datei die einfach ausgeführt werden kann. Dazu kenne ich mich auf Windows aber zu wenig aus
+- das wird also dauern.
+
+Bis dahin gibt es ein JAR File welches das Programm enthält, eine properties Datei die ins Home Verzeichnis zu
+speichern und individuell anzupassen ist, ein Shell Skript welches ins gleiche Verzeichnis zusammen mit dem JAR File
+abgelegt wird. Über das Shell Skript lässt sich das Programm dann starten. Es erscheint ein neues Icon im SystemTray.
+
+Systemanforderung: Java 11 muss installiert sein. Sonst geht leider nix.
+
+Die Verteilung der Artefakte erfolgt über Bintray und maven central.
+
+Anbei noch ein Beispiel für eine rezeptsammlung.properties Datei
+
+.rezeptsammlung.properties
+[source, shell]
+----
+# config file of rezeptsammlung
+
+jenkinsauth.host-#1=http://localhost:8099
+jenkinsauth.username-#1=admin
+jenkinsauth.password-#1=streng geheim
+jenkinsauth.host-#2=http://jennkinshost:8099
+jenkinsauth.username-#2=admin
+jenkinsauth.password-#2=noch streng geheimer
+
+
+# valid valid >4 (value in seconds)
+rezeptsammlung.pollperiod=6
+
+# id = [a-zA-Z0-9]+ (Zahlen und Buchstaben)
+# joburl-id=http://localhost:8090/job/multibranchjob/job/master
+joburl-#1=http://jenkinshost:8099/job/multibranchjob1/job/master
+joburl-#2=http://jenkinshost:8099/job/multibranchjob2/job/master
+joburl-#3=http://jenkinshost:8099/job/singlejob
+----
+
+[#nutzung]
+== Nutzung
+
+Wie unter Installation beschrieben:
+
+. JAR und Shell Skript in ein Verzeichnis legen und falls notwendig mit Ausführungsrechten versehen (typisch unter Linux).
+. Properties Datei ins Homeverzeichnis legen und anpassen, vor allem die URLs :)
+. Doppelklick auf das richtige Shellscript (*.sh Linux und *.bat oder *.cmd unter Windows)
+
+Die weitere Nutzung läuft über Mausklicks auf das neu im Systemtray erschienene Icon:
+
+* Linksklick: Statusfenster ein-/ausschalten
+* Rechtsklick: Statusanzeige & Settings als Kontextmenü.
+
+Wie im Statusfenster ist auch im Kontextmenü eine Navigation zu den Jenkins Jobs möglich.
+
+(Aktuell ist es notwendig, dass im Jenkins die Option "alle dürfen lesen" aktiviert ist. Das ist notwendig, weil aktuell
+noch keine Authentifizierung untestützt wird.)
+
+[#projektverantwortlicher]
+== Projektverantwortlicher
+
+https://github.com/FunThomas424242[@Huluvu424242]
+
+[#unterstützung]
+== Unterstützung
+
+Unterstützung ist jederzeit erwünscht. Ein gelungener Einstieg sollte sich über Duchlesen, Prüfen/Testen, Korrigieren/Weiterentwickeln und Änderungen als Pull-Request einstellen, ergeben.
+Du kannst aber auch jederzeit gern ein Ticket öffnen unter: https://github.com/FunThomas424242/rezeptsammlung/issues/new/choose[Ticket Erstellen].
+
+Dieses Projekt folgt den unter https://funthomas424242.github.io/rezeptsammlung/code-of-conduct.txt[Verhaltenskodex] abgelegten Verhaltensregeln. Welche auch unter https://www.contributor-covenant.org/de/version/1/4/code-of-conduct/[Verhaltenskodex für Unterstützer] veröffentlicht wurden.
+
+=== Unterstützer
+
+Dieses Projekt lebt vom Support all seiner Unterstützer genau wie auch vom Support all jener welche nicht namentlich bekannt sind aber das Projekt im Internet bekannt machen oder anderweitig unterstützen.
+
+Vielen Dank für all Euren Suppprt! 
+
+////
+Ab 100 Sterne auf github ist eine Verwaltung über opencollective für OpenSource Projekte möglich
+This project exists thanks to all the people who contribute. 
+<a href="graphs/contributors"><img src="https://opencollective.com/standard-readme/contributors.svg?width=890&button=false" /></a>
+////
+
+[#lizenz]
+== Lizenz
+
+link:LICENSE[LGPL-3.0] © link:https://github.com/PIUGroup[PIUG]
+
+

@@ -1,0 +1,10 @@
+# Rezeptsammlung
+:author: FunThomas424242 (Thomas Schubert)
+//:toc:
+:icons: font
+:lang: de
+:encoding: iso-8859-1
+
+Dieses Projekt stellt eine Rezeptsammlung  bereit.
+
+link:benutzer.html[Benutzerhandbuch] link:entwickler.html[Entwicklerhandbuch]

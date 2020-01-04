@@ -1,0 +1,14 @@
+[Desktop Entry]
+Version=1.0
+Encoding=UTF-8
+Type=Application
+Name=Rezeptsammlung 0.0.1
+GenericName=Rezeptsammlung
+Comment=Ein Monitor für Jenkins Jobs.
+Icon=1984EmmanuelGoldstein
+Exec=jenkinsmonitor.wrapper
+MimeType=application/x-iso9660-appimage;
+Terminal=false
+StartupNotify=true
+Categories=Development;
+X-GNOME-Autostart-Delay=5
