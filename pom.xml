@@ -9,7 +9,7 @@
     <relativePath/> <!-- lookup parent from repository -->
   </parent>
   <groupId>com.github.funthomas424242</groupId>
-  <artifactId>rezeptsammlung</artifactId>
+  <artifactId>job-dealer</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <name>rezeptsammlung</name>
   <description>Dezentrale Rezeptsammlung auf MongoDB Basis</description>
