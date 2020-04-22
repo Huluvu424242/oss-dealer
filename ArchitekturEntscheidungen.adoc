@@ -9,7 +9,8 @@
 * Vom Nutzer eingegebene Suchwörter werden auf Stoppwörter untersucht. Stoppwörter werden wie folgt behandelt:
   ** Sie werden nicht erweitert (also es werden keine Geschlechtsformen etc. gesucht).
   ** Sie werden bei der Phrasensuche berücksichtigt
-
+* Der Nutzer erhält eine Eingabeunterstützung durch Vorschlagslisten wie folgt:
+  ** Eingegebene Ortsnamen werden auf Rechtschreibfehler mit Levenstein=2 untersucht und die korrekten Formen als Liste vorgeschlagen. 
 
 == Architekturentscheidungen
 
