@@ -17,6 +17,10 @@
 
 === Technische Aspekte der fachlichen Umsetzung
 
+* Formen für männlich/weiblich, Beruf, Tätigkeit, Mehrzahl oder Einzahl können erbracht werden durch: 
+  ** Stemmer
+  ** Synonymlisten (evtl. dynamisch per Outsourcing an Nutzer aufbaubar). 
+
 
 ==== Entscheidung Programmiersprache
 
