@@ -11,6 +11,8 @@
   ** Sie werden bei der Phrasensuche berücksichtigt
 * Der Nutzer erhält eine Eingabeunterstützung durch Vorschlagslisten wie folgt:
   ** Eingegebene Ortsnamen werden auf Rechtschreibfehler mit Levenstein=2 untersucht und die korrekten Formen als Liste vorgeschlagen. 
+* Teilen in sozialen Medien soll mit gezielter Vorschau unterstützt werden.
+* SEO soll unterstützt werden z.B. durch rel cannonical url Support
 
 == Architekturentscheidungen
 
