@@ -1,4 +1,18 @@
+= Architekturentscheidungen & Fachliche Anforderungen
+
+== Fachliche Anforderungen 
+
+* Vom Nutzer eingegebene Suchwörter sollen erweitert werden um:
+  ** Geschlechtsformen: männlich/weiblich/neutral
+  ** Mehrzahl/Einzahl
+  ** Tätigkeit (z.B. Coaching) / Beruf (z.B. Coach)
+* Vom Nutzer eingegebene Suchwörter werden auf Stoppwörter untersucht. Stoppwörter werden wie folgt behandelt:
+  ** Sie werden nicht erweitert (also es werden keine Geschlechtsformen etc. gesucht).
+  ** Sie werden bei der Phrasensuche berücksichtigt
+
+
 == Architekturentscheidungen
+
 
 === Technische Aspekte der fachlichen Umsetzung
 
