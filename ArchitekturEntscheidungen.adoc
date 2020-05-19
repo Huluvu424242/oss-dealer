@@ -6,6 +6,9 @@
   ** Geschlechtsformen: männlich/weiblich/neutral
   ** Mehrzahl/Einzahl
   ** Tätigkeit (z.B. Coaching) / Beruf (z.B. Coach)
+  ** Synonyme Berufe: Fleischer -> Metzger
+  ** Abkürzungen: vs -> versus  
+  ** Phrasenerkennung: erkannte Phrase wird behandelt wie in " geschrieben "product owner".
 * Vom Nutzer eingegebene Suchwörter werden auf Stoppwörter untersucht. Stoppwörter werden wie folgt behandelt:
   ** Sie werden nicht erweitert (also es werden keine Geschlechtsformen etc. gesucht).
   ** Sie werden bei der Phrasensuche berücksichtigt
@@ -14,6 +17,8 @@
 * Teilen in sozialen Medien soll mit gezielter Vorschau unterstützt werden.
 * SEO soll unterstützt werden z.B. durch rel cannonical url Support
 
+* Umgang mit Sonderfällen: C#, IT, 
+  evtl. Entfernung aus Suchstring
 == Architekturentscheidungen
 
 
